@@ -30,7 +30,41 @@ const credential = GoogleAuthProvider.credentialFromError(error);
 });
 };
 return (
-<Box position={"fixed"} top="5%" right="5%">
+<Box display="flex" alignItems="center" justifyContent="space-between">
+    <Box>
+<Link href="/add-todo"><Button
+  size='md'
+  height='48px'
+  width='200px'
+  border='2px'
+  borderColor='green.500'
+>
+  Add To Do
+</Button></Link>
+    </Box>
+    <Box>
+    <Link href="/"><Button
+  size='md'
+  height='48px'
+  width='200px'
+  border='2px'
+  borderColor='green.500'
+>
+  All Files
+</Button></Link>
+    </Box>
+    <Box>
+    <Link href="/add-event"><Button
+  size='md'
+  height='48px'
+  width='200px'
+  border='2px'
+  borderColor='green.500'
+>
+Add Event
+</Button></Link>
+    </Box>
+    <Box textAlign="right">
 <Button onClick={() => toggleColorMode()}>
 {colorMode == "dark" ? <FaSun /> : <FaMoon />}
 </Button>{" "}
@@ -47,6 +81,7 @@ Logout
 Login with Google
 </Button>
 )}
+</Box>
 </Box>
 );
 };
